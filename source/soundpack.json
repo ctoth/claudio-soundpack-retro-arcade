@@ -1,7 +1,7 @@
 {
   "name": "retro-arcade",
-  "description": "8-bit and 16-bit console and arcade sounds: pulse leads, a triangle bass voice and a noise channel, all in C major pentatonic",
-  "version": "1.0.0",
+  "description": "8-bit and 16-bit console and arcade sounds built from Kenney's CC0 chip recordings: pulse leads, zaps, lasers and a noise channel, all tuned to C major pentatonic",
+  "version": "2.0.0",
   "mappings": {
     "completion/agent-complete.wav": "synth/done-agent.wav",
     "completion/completion.wav": "synth/done-agent.wav",

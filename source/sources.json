@@ -1,0 +1,164 @@
+{
+  "sources": [
+    {
+      "file": "raw/kenney/digital-audio/phaseJump3.wav",
+      "title": "phaseJump3",
+      "author": "Kenney",
+      "source": "https://kenney.nl/assets/digital-audio",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    {
+      "file": "raw/kenney/digital-audio/phaserDown1.wav",
+      "title": "phaserDown1",
+      "author": "Kenney",
+      "source": "https://kenney.nl/assets/digital-audio",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    {
+      "file": "raw/kenney/digital-audio/phaserUp4.wav",
+      "title": "phaserUp4",
+      "author": "Kenney",
+      "source": "https://kenney.nl/assets/digital-audio",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    {
+      "file": "raw/kenney/digital-audio/phaserUp7.wav",
+      "title": "phaserUp7",
+      "author": "Kenney",
+      "source": "https://kenney.nl/assets/digital-audio",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    {
+      "file": "raw/kenney/digital-audio/powerUp1.wav",
+      "title": "powerUp1",
+      "author": "Kenney",
+      "source": "https://kenney.nl/assets/digital-audio",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    {
+      "file": "raw/kenney/digital-audio/threeTone2.wav",
+      "title": "threeTone2",
+      "author": "Kenney",
+      "source": "https://kenney.nl/assets/digital-audio",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    {
+      "file": "raw/kenney/digital-audio/tone1.wav",
+      "title": "tone1",
+      "author": "Kenney",
+      "source": "https://kenney.nl/assets/digital-audio",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    {
+      "file": "raw/kenney/digital-audio/zap1.wav",
+      "title": "zap1",
+      "author": "Kenney",
+      "source": "https://kenney.nl/assets/digital-audio",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    {
+      "file": "raw/kenney/digital-audio/zap2.wav",
+      "title": "zap2",
+      "author": "Kenney",
+      "source": "https://kenney.nl/assets/digital-audio",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    {
+      "file": "raw/kenney/digital-audio/zapThreeToneUp.wav",
+      "title": "zapThreeToneUp",
+      "author": "Kenney",
+      "source": "https://kenney.nl/assets/digital-audio",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    {
+      "file": "raw/kenney/interface-sounds/bong_001.wav",
+      "title": "bong_001",
+      "author": "Kenney",
+      "source": "https://kenney.nl/assets/interface-sounds",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    {
+      "file": "raw/kenney/interface-sounds/maximize_006.wav",
+      "title": "maximize_006",
+      "author": "Kenney",
+      "source": "https://kenney.nl/assets/interface-sounds",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    {
+      "file": "raw/kenney/interface-sounds/minimize_006.wav",
+      "title": "minimize_006",
+      "author": "Kenney",
+      "source": "https://kenney.nl/assets/interface-sounds",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    {
+      "file": "raw/kenney/interface-sounds/tick_002.wav",
+      "title": "tick_002",
+      "author": "Kenney",
+      "source": "https://kenney.nl/assets/interface-sounds",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    {
+      "file": "raw/kenney/music-jingles/jingles_NES00.wav",
+      "title": "jingles_NES00",
+      "author": "Kenney",
+      "source": "https://kenney.nl/assets/music-jingles",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    {
+      "file": "raw/kenney/music-jingles/jingles_NES11.wav",
+      "title": "jingles_NES11",
+      "author": "Kenney",
+      "source": "https://kenney.nl/assets/music-jingles",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    {
+      "file": "raw/kenney/music-jingles/jingles_NES13.wav",
+      "title": "jingles_NES13",
+      "author": "Kenney",
+      "source": "https://kenney.nl/assets/music-jingles",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    {
+      "file": "raw/kenney/sci-fi-sounds/engineCircular_002.wav",
+      "title": "engineCircular_002",
+      "author": "Kenney",
+      "source": "https://kenney.nl/assets/sci-fi-sounds",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    {
+      "file": "raw/kenney/sci-fi-sounds/explosionCrunch_000.wav",
+      "title": "explosionCrunch_000",
+      "author": "Kenney",
+      "source": "https://kenney.nl/assets/sci-fi-sounds",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    {
+      "file": "raw/kenney/sci-fi-sounds/laserRetro_000.wav",
+      "title": "laserRetro_000",
+      "author": "Kenney",
+      "source": "https://kenney.nl/assets/sci-fi-sounds",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    }
+  ]
+}

@@ -2,8 +2,7 @@
 
 8-bit and 16-bit console and arcade sounds for [Claudio](https://claudio.click):
 menu blips, a coin, a jump, a power-up, a pause jingle, a laser, damage, and
-a stage clear. Every sound is synthesized from a text recipe in this
-repository; there are no samples.
+a stage clear.
 
 ## Install
 
@@ -21,21 +20,26 @@ claudio soundpack update retro-arcade
 
 44 sounds answering for 132 sound keys.
 
-The pack is built the way a sound chip of that era was: pulse waves at
-12.5%, 25% and 50% duty for leads and blips, a triangle wave for bass, and a
-noise channel for clicks, thumps, snares and explosions. Chords are played
-as fast arpeggios, because the chips had too few voices to hold one.
+Every sound is built on a recording: 20 chip-style effects and jingles by
+Kenney (CC0), sliced, retuned and layered by a text recipe in this
+repository. A held note from an NES-style jingle is the lead voice, a
+decaying zap is the ringing voice, a short hollow tone plays the shell and
+edit blips, and a low bong is the bass. Recorded phaser slides, a retro
+laser, an engine drone and an explosion are used as they are. Synthesis adds
+only what a sound chip would add around them: a triangle bass line, a second
+pulse voice, noise-channel clicks and hats, and an arpeggio shimmer.
 
-- **One key.** Everything pitched is drawn from C major pentatonic
-  (C D E G A), so sounds that overlap stay in tune with each other. Success
-  sounds land on C. Error sounds step outside the scale (D flat, A flat,
-  B flat, F sharp), which is why they sound wrong without being loud.
+- **One key.** Every recording is retuned so that pitched notes fall in C
+  major pentatonic (C D E G A), so sounds that overlap stay in tune with
+  each other. Success sounds land on C. Error sounds step outside the scale
+  (D flat, A flat, B flat, a whole-tone run, a semitone trill), which is why
+  they sound wrong without being loud.
 - **Call and response.** A loading sound and its result share a voice: the
-  shell starts with a hollow square G and succeeds by stepping up to C, or
-  fails by dropping a tritone to D flat. An edit starts with two taps and
-  ends with a coin, or with the same two taps and a sour note.
-- **Short where it counts.** The sounds that fire constantly are 30 to
-  220 ms: a menu-cursor tick, single blips, two-note flicks. The tunes are
+  shell starts with a hollow G and succeeds by stepping up to C, or fails by
+  dropping a tritone to D flat. An edit starts with two taps and ends with a
+  coin, or with the same two taps and a sour note.
+- **Short where it counts.** The sounds that fire constantly are 20 to
+  200 ms: a menu-cursor tick, single blips, two-note flicks. The tunes are
   kept for what happens rarely: session start (2.7 s), a finished turn, a
   commit, a passed build.
 - **Level.** Every sound sits at -18 LUFS with true peaks under -1 dBTP, so
@@ -50,12 +54,13 @@ Some of the idioms and where they are used:
 | Coin | file edited or written |
 | Jump | prompt sent |
 | Laser | subagent dispatched |
-| Scanner warble | search |
+| Scanner sweep | search |
+| Gear change | build started |
 | Power-up | build passed |
 | Item get | commit landed |
 | Pause jingle | plan presented |
 | Damage, bonk | errors |
-| Siren and explosion | critical error |
+| Alarm and explosion | critical error |
 | Stage clear | celebration |
 | Insert coin, start tune | session start |
 
@@ -63,14 +68,16 @@ Some of the idioms and where they are used:
 
 ```text
 source/recipe.json     the recipe: every sound, and which key it answers for
+source/raw/            the recordings the recipe slices, as downloaded
+source/sources.json    author, source and licence of every file in raw/
 source/synth/          rendered from the recipe by `soundpack synth`
 source/soundpack.json  written by `soundpack synth`
 soundpack.json         built: sound key -> sounds/...wav
 sounds/                built: mastered WAVs
 ```
 
-Everything except `source/recipe.json` is a build product. Do not edit the
-others by hand; change the recipe and rebuild.
+`source/synth/`, `source/soundpack.json`, `soundpack.json` and `sounds/` are
+build products. Do not edit them by hand; change the recipe and rebuild.
 
 ## Changing The Pack
 
@@ -78,8 +85,15 @@ Needs a `claudio` with the `soundpack synth`, `soundpack master` and
 `soundpack audit` commands.
 
 1. Edit `source/recipe.json`. `claudio soundpack synth --help` lists every
-   setting. Each sound has an `about` line saying what it is meant to be.
-2. Rebuild and check:
+   setting. Each sound has an `about` line saying what it is meant to be. A
+   layer with `"sample"` plays a slice of a file under `source/raw/`:
+   `start` and `end` pick the slice, `speed` retunes it (speed = wanted Hz /
+   recorded Hz). Recordings are never cut by hand; every cut is in the
+   recipe.
+2. If you add a recording, put it under `source/raw/<collection>/` and add
+   its author, source and licence to `source/sources.json` and to the
+   Sources section below. Remove a recording the recipe no longer uses.
+3. Rebuild and check:
 
    ```bash
    rm -rf sounds soundpack.json source/synth source/soundpack.json
@@ -89,15 +103,29 @@ Needs a `claudio` with the `soundpack synth`, `soundpack master` and
    claudio soundpack validate soundpack.json
    ```
 
-3. Read the audit table against the `about` lines. A sound described as
-   "three rising notes" should show 3 under `HIT` and `rising` under
+4. Read the audit table against the `about` lines. A sound described as
+   "three hits, rising" should show 3 under `HIT` and `rising` under
    `TREND`. If `master` reports a sound as `truncated`, it was longer than
    its category allows; shorten it in the recipe.
 
 CI runs the same validate and audit on every push, and rebuilds the pack
 from `source/soundpack.json` to check that the committed build matches.
 
-## Source Notice
+## Sources
 
-The recipe and the sounds rendered from it are original work made for this
-pack. No recordings or samples from any game are included.
+All 20 recordings under `source/raw/` are by **Kenney**
+([kenney.nl](https://kenney.nl)) and are released under
+[CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) (public
+domain dedication). No credit is legally required; it is given here with
+thanks.
+
+| Collection | Files used | Licence |
+| --- | --- | --- |
+| [Digital Audio](https://kenney.nl/assets/digital-audio) | phaseJump3, phaserDown1, phaserUp4, phaserUp7, powerUp1, threeTone2, tone1, zap1, zap2, zapThreeToneUp | CC0 1.0 |
+| [Music Jingles](https://kenney.nl/assets/music-jingles) | jingles_NES00, jingles_NES11, jingles_NES13 | CC0 1.0 |
+| [Interface Sounds](https://kenney.nl/assets/interface-sounds) | bong_001, maximize_006, minimize_006, tick_002 | CC0 1.0 |
+| [Sci-Fi Sounds](https://kenney.nl/assets/sci-fi-sounds) | engineCircular_002, explosionCrunch_000, laserRetro_000 | CC0 1.0 |
+
+`source/sources.json` lists each file with its author, source page and
+licence. The recipe and the synthesized layers are original work made for
+this pack. No recordings or samples from any commercial game are included.
