@@ -26,10 +26,10 @@
       ]
     },
     "load-read": {
-      "about": "two quick chip notes E5 then A5, a rising flick",
+      "about": "two quick chip notes E5 then G5, a small upward flick; they are the first two notes of the read success. TREND reads steady: a minor third is too small a change in brightness for the meter",
       "layers": [
         {"sample": "raw/kenney/music-jingles/jingles_NES00.wav", "start": 0.70, "end": 0.767, "speed": 2.242, "attack": 0.003, "release": 0.01, "lowpass": 3400},
-        {"sample": "raw/kenney/music-jingles/jingles_NES00.wav", "start": 0.70, "end": 0.79, "speed": 2.993, "at": 0.045, "attack": 0.003, "release": 0.012, "lowpass": 3800}
+        {"sample": "raw/kenney/music-jingles/jingles_NES00.wav", "start": 0.70, "end": 0.78, "speed": 2.667, "at": 0.045, "attack": 0.003, "release": 0.012, "lowpass": 3600}
       ]
     },
     "load-search": {
@@ -47,18 +47,18 @@
       ]
     },
     "load-git": {
-      "about": "one low recorded bong on C4, with a faint pulse overtone rising after it",
+      "about": "one low recorded bong on C4, with a short pulse click on C5 at its front. TREND reads falling because the bright click is in the first half; the pitch does not move",
       "layers": [
         {"sample": "raw/kenney/interface-sounds/bong_001.wav", "start": 0.0, "end": 0.12, "speed": 1.122, "attack": 0.002, "release": 0.02},
-        {"wave": "pulse", "width": 0.125, "freq": "C5", "freq_end": "G5", "at": 0.03, "dur": 0.05, "attack": 0.01, "release": 0.03, "lowpass": 3000, "gain": -14}
+        {"wave": "pulse", "width": 0.125, "freq": "C5", "dur": 0.02, "attack": 0.003, "release": 0.015, "lowpass": 3000, "gain": -12}
       ]
     },
     "load-commit": {
-      "about": "a heavy dun-dun: the low bong on C4 twice with a noise thump on each, the second lifted by a square C5 an octave above; two hits",
+      "about": "a heavy dun-dun: the low bong on C4 twice, each with a square C5 an octave above and a noise thump; two equal hits. TREND reads falling although both hits are the same note: the file ends in the second hit's dull tail",
       "layers": [
         {"sample": "raw/kenney/interface-sounds/bong_001.wav", "start": 0.0, "end": 0.12, "speed": 1.122, "attack": 0.002, "release": 0.02},
         {"sample": "raw/kenney/interface-sounds/bong_001.wav", "start": 0.0, "end": 0.12, "speed": 1.122, "at": 0.13, "attack": 0.002, "release": 0.02},
-        {"wave": "square", "freq": "C5", "at": 0.13, "dur": 0.05, "attack": 0.003, "release": 0.03, "lowpass": 2600, "gain": -8},
+        {"wave": "square", "notes": ["C5", "C5"], "step": 0.13, "dur": 0.06, "attack": 0.003, "release": 0.025, "lowpass": 2600, "gain": -10},
         {"wave": "noise", "notes": [440, 440], "step": 0.13, "dur": 0.02, "attack": 0.002, "decay": 0.03, "sustain": 0, "release": 0.01, "lowpass": 900, "highpass": 150, "gain": -9}
       ]
     },
@@ -131,7 +131,7 @@
       ]
     },
     "ok-edit": {
-      "about": "a coin: one short chip blip on G5, then a recorded zap a fourth above ringing on C6; two hits",
+      "about": "a coin: one short chip blip on G5, then a recorded zap a fourth above ringing on C6; two hits. TREND reads steady, not rising: the C6 ring fills both halves of the sound",
       "layers": [
         {"sample": "raw/kenney/music-jingles/jingles_NES00.wav", "start": 0.70, "end": 0.793, "speed": 2.667, "attack": 0.003, "release": 0.008, "lowpass": 3400, "gain": -3},
         {"sample": "raw/kenney/digital-audio/zapThreeToneUp.wav", "start": 0.20, "end": 0.75, "speed": 3.364, "at": 0.05, "attack": 0.003, "release": 0.04, "lowpass": 4200}
@@ -147,7 +147,7 @@
       ]
     },
     "ok-commit": {
-      "about": "item get: four quick rising chip notes C5 E5 G5 C6, then a held zap chord of C6 and E6 ringing away; five hits",
+      "about": "item get: four quick rising chip notes C5 E5 G5 C6, then a held zap chord of C6 and E6 ringing away; five hits. TREND reads steady, not rising: the decaying chord in the second half is no brighter than the notes that climb to it",
       "layers": [
         {"sample": "raw/kenney/music-jingles/jingles_NES00.wav", "start": 0.70, "end": 0.771, "speed": 1.780, "at": 0.0, "attack": 0.003, "release": 0.012, "lowpass": 3800},
         {"sample": "raw/kenney/music-jingles/jingles_NES00.wav", "start": 0.70, "end": 0.790, "speed": 2.242, "at": 0.06, "attack": 0.003, "release": 0.012, "lowpass": 3800},
@@ -167,7 +167,7 @@
       "effects": [{"type": "delay", "time": 0.16, "feedback": 0.35, "mix": 0.3}]
     },
     "ok-network": {
-      "about": "the dialing trill G5 A5 answered by a ringing zap on C6",
+      "about": "the dialing trill G5 A5 answered by a ringing zap on C6; three hits. TREND reads steady, not rising: the C6 ring starts before the halfway point and fills both halves",
       "layers": [
         {"sample": "raw/kenney/music-jingles/jingles_NES00.wav", "start": 0.70, "end": 0.793, "speed": 2.667, "attack": 0.003, "release": 0.01, "lowpass": 3400},
         {"sample": "raw/kenney/music-jingles/jingles_NES00.wav", "start": 0.70, "end": 0.805, "speed": 2.993, "at": 0.05, "attack": 0.003, "release": 0.01, "lowpass": 3400},
@@ -184,23 +184,25 @@
       ]
     },
     "ok-agent": {
-      "about": "the shot comes back: a recorded phaser slide rising to C6, then two chip sparkle notes E6 G6",
+      "about": "the shot comes back: a recorded phaser slide rising to C6, then two ringing zap sparkles E6 and G6 over a soft C5. Three events; HIT reads 2 because the G6 starts while the E6 is still ringing",
       "layers": [
         {"sample": "raw/kenney/digital-audio/phaserUp7.wav", "start": 0.10, "end": 0.27, "speed": 0.944, "attack": 0.003, "release": 0.012, "lowpass": 4000},
-        {"sample": "raw/kenney/music-jingles/jingles_NES00.wav", "start": 0.70, "end": 0.879, "speed": 4.485, "at": 0.2, "attack": 0.003, "release": 0.012, "lowpass": 5000},
-        {"sample": "raw/kenney/music-jingles/jingles_NES00.wav", "start": 0.70, "end": 0.913, "speed": 5.333, "at": 0.26, "attack": 0.003, "release": 0.02, "lowpass": 5000}
+        {"sample": "raw/kenney/digital-audio/zap1.wav", "start": 0.105, "end": 0.55, "speed": 2.997, "at": 0.2, "attack": 0.003, "release": 0.05, "lowpass": 5000},
+        {"sample": "raw/kenney/digital-audio/zap1.wav", "start": 0.105, "end": 0.65, "speed": 3.564, "at": 0.26, "attack": 0.003, "release": 0.05, "lowpass": 5000},
+        {"wave": "triangle", "freq": "C5", "at": 0.2, "dur": 0.09, "attack": 0.003, "release": 0.05, "gain": -10}
       ]
     },
     "ok-plan": {
-      "about": "unpause: the first two notes of the pause trill, C6 E6, break upward to a ringing zap on G6 over the root; three hits",
+      "about": "unpause: the first two notes of the pause trill, C6 E6, break upward to a ringing zap on G6 over the root; three hits. TREND reads falling although the melody rises: the second half is the zap's decay, which is duller than the trill",
       "layers": [
-        {"sample": "raw/kenney/digital-audio/powerUp1.wav", "start": 0.085, "end": 0.38, "speed": 1.414, "attack": 0.003, "release": 0.012, "lowpass": 3200},
-        {"sample": "raw/kenney/digital-audio/zap1.wav", "start": 0.105, "end": 0.99, "speed": 3.564, "at": 0.22, "attack": 0.003, "release": 0.08, "lowpass": 7000},
-        {"sample": "raw/kenney/digital-audio/zap1.wav", "start": 0.105, "end": 0.99, "speed": 2.378, "at": 0.22, "attack": 0.003, "release": 0.08, "lowpass": 5000, "gain": -8}
+        {"sample": "raw/kenney/digital-audio/powerUp1.wav", "start": 0.085, "end": 0.38, "speed": 1.414, "attack": 0.003, "release": 0.012, "lowpass": 4200},
+        {"sample": "raw/kenney/digital-audio/zap1.wav", "start": 0.105, "end": 0.99, "speed": 3.564, "at": 0.22, "attack": 0.003, "release": 0.08, "lowpass": 4500},
+        {"sample": "raw/kenney/digital-audio/zap1.wav", "start": 0.105, "end": 0.99, "speed": 2.378, "at": 0.22, "attack": 0.003, "release": 0.08, "lowpass": 4000, "gain": -8},
+        {"wave": "triangle", "freq": "C5", "at": 0.22, "dur": 0.12, "attack": 0.003, "release": 0.1, "gain": -11}
       ]
     },
     "ok-celebration": {
-      "about": "stage clear: twelve chip notes in three climbing arpeggios over a bouncing bass and snare, then one long ringing C major zap chord with a shimmer and a crash",
+      "about": "stage clear: twelve chip notes in three climbing arpeggios over a sustained triangle bass and snare, then one long ringing C major zap chord with a shimmer and a crash. Thirteen events; HIT reads 4 (one per bar and the chord) because the bass holds the level up between the arpeggio notes",
       "layers": [
         {"sample": "raw/kenney/music-jingles/jingles_NES00.wav", "start": 0.70, "end": 0.780, "speed": 1.780, "at": 0.0, "attack": 0.003, "release": 0.01, "lowpass": 4000},
         {"sample": "raw/kenney/music-jingles/jingles_NES00.wav", "start": 0.70, "end": 0.801, "speed": 2.242, "at": 0.06, "attack": 0.003, "release": 0.01, "lowpass": 4000},
@@ -214,7 +216,7 @@
         {"sample": "raw/kenney/music-jingles/jingles_NES00.wav", "start": 0.70, "end": 0.820, "speed": 2.667, "at": 0.54, "attack": 0.003, "release": 0.01, "lowpass": 4000},
         {"sample": "raw/kenney/music-jingles/jingles_NES00.wav", "start": 0.70, "end": 0.860, "speed": 3.560, "at": 0.60, "attack": 0.003, "release": 0.01, "lowpass": 4000},
         {"sample": "raw/kenney/music-jingles/jingles_NES00.wav", "start": 0.70, "end": 0.902, "speed": 4.485, "at": 0.66, "attack": 0.003, "release": 0.01, "lowpass": 4000},
-        {"wave": "triangle", "notes": ["C4", "C4", "C4", "C4", "D4", "D4", "D4", "D4", "E4", "E4", "E4", "E4"], "step": 0.06, "dur": 0.04, "attack": 0.003, "release": 0.012, "gain": -10},
+        {"wave": "triangle", "notes": ["C4", "D4", "E4"], "step": 0.24, "dur": 0.2, "attack": 0.003, "release": 0.03, "gain": -9},
         {"wave": "noise", "notes": [440, 440, 440], "step": 0.24, "dur": 0.02, "attack": 0.002, "decay": 0.05, "sustain": 0, "release": 0.02, "highpass": 800, "lowpass": 5000, "gain": -14},
         {"sample": "raw/kenney/digital-audio/zap1.wav", "start": 0.105, "end": 0.99, "speed": 2.378, "at": 0.72, "attack": 0.003, "release": 0.1, "lowpass": 4500},
         {"sample": "raw/kenney/digital-audio/zap1.wav", "start": 0.105, "end": 0.99, "speed": 2.997, "at": 0.72, "attack": 0.003, "release": 0.1, "lowpass": 4500, "gain": -3},
@@ -237,8 +239,8 @@
       "about": "bonk: two hollow chip tones, G4 then a duller, slightly sour Db4 a tritone down; falling",
       "layers": [
         {"sample": "raw/kenney/digital-audio/tone1.wav", "start": 0.08, "end": 0.15, "speed": 1.5, "attack": 0.003, "release": 0.012, "lowpass": 3000},
-        {"sample": "raw/kenney/digital-audio/tone1.wav", "start": 0.08, "end": 0.15, "speed": 1.06, "at": 0.085, "attack": 0.003, "release": 0.03, "lowpass": 1200},
-        {"sample": "raw/kenney/digital-audio/tone1.wav", "start": 0.08, "end": 0.15, "speed": 1.085, "at": 0.085, "attack": 0.003, "release": 0.03, "lowpass": 1200, "gain": -6},
+        {"sample": "raw/kenney/digital-audio/tone1.wav", "start": 0.08, "end": 0.15, "speed": 1.06, "at": 0.085, "attack": 0.003, "release": 0.03, "lowpass": 2400},
+        {"sample": "raw/kenney/digital-audio/tone1.wav", "start": 0.08, "end": 0.15, "speed": 1.085, "at": 0.085, "attack": 0.003, "release": 0.03, "lowpass": 2400, "gain": -6},
         {"wave": "noise", "at": 0.085, "dur": 0.015, "attack": 0.002, "decay": 0.03, "sustain": 0, "release": 0.01, "lowpass": 900, "highpass": 200, "gain": -10}
       ]
     },
@@ -250,12 +252,12 @@
       ]
     },
     "err-edit": {
-      "about": "the two D5 taps again, then a sour buzzing drop to Ab4",
+      "about": "the two D5 taps again, then a sour buzzing drop to Ab4; three hits. TREND reads steady although the pitch drops a tritone: the buzzing Ab4 has as many overtones as the taps",
       "layers": [
         {"sample": "raw/kenney/digital-audio/tone1.wav", "start": 0.08, "end": 0.15, "speed": 2.247, "attack": 0.003, "release": 0.012, "lowpass": 3200},
         {"sample": "raw/kenney/digital-audio/tone1.wav", "start": 0.08, "end": 0.15, "speed": 2.247, "at": 0.075, "attack": 0.003, "release": 0.012, "lowpass": 3200},
-        {"sample": "raw/kenney/music-jingles/jingles_NES00.wav", "start": 0.70, "end": 0.912, "speed": 1.413, "at": 0.15, "attack": 0.003, "release": 0.03, "lowpass": 1600, "gain": 3},
-        {"sample": "raw/kenney/music-jingles/jingles_NES00.wav", "start": 0.70, "end": 0.916, "speed": 1.44, "at": 0.15, "attack": 0.003, "release": 0.03, "lowpass": 1600, "gain": -2}
+        {"sample": "raw/kenney/music-jingles/jingles_NES00.wav", "start": 0.70, "end": 0.912, "speed": 1.413, "at": 0.15, "attack": 0.003, "release": 0.03, "lowpass": 2600},
+        {"sample": "raw/kenney/music-jingles/jingles_NES00.wav", "start": 0.70, "end": 0.916, "speed": 1.44, "at": 0.15, "attack": 0.003, "release": 0.03, "lowpass": 2600, "gain": -5}
       ]
     },
     "err-network": {
@@ -311,7 +313,7 @@
       ]
     },
     "ui-notification": {
-      "about": "a four-note chip call C6 G5 C6 then a held E6 that rings on as a zap, over triangle bass, with a light echo",
+      "about": "a four-note chip call C6 G5 C6 then a held E6 that rings on as a zap, over triangle bass with a low C4 under the held note, with a light echo. TREND reads falling although the call ends on its highest note: the second half is the decaying ring, the low pad and the echoes",
       "layers": [
         {"sample": "raw/kenney/music-jingles/jingles_NES00.wav", "start": 0.70, "end": 1.003, "speed": 3.560, "at": 0.0, "attack": 0.003, "release": 0.02, "lowpass": 4000},
         {"sample": "raw/kenney/music-jingles/jingles_NES00.wav", "start": 0.70, "end": 0.927, "speed": 2.667, "at": 0.12, "attack": 0.003, "release": 0.02, "lowpass": 4000},
@@ -319,7 +321,8 @@
         {"sample": "raw/kenney/music-jingles/jingles_NES00.wav", "start": 0.70, "end": 1.64, "speed": 4.485, "at": 0.36, "attack": 0.003, "release": 0.05, "lowpass": 4500},
         {"sample": "raw/kenney/digital-audio/zap1.wav", "start": 0.105, "end": 0.99, "speed": 2.997, "at": 0.36, "attack": 0.003, "release": 0.1, "lowpass": 4500, "gain": -3},
         {"wave": "triangle", "notes": ["C5", "G4", "C5"], "step": 0.12, "dur": 0.085, "attack": 0.003, "release": 0.02, "gain": -10},
-        {"wave": "triangle", "freq": "C5", "at": 0.36, "dur": 0.25, "attack": 0.003, "release": 0.12, "gain": -12}
+        {"wave": "triangle", "freq": "C4", "at": 0.36, "dur": 0.28, "attack": 0.003, "release": 0.12, "gain": -8},
+        {"wave": "triangle", "freq": "C5", "at": 0.36, "dur": 0.28, "attack": 0.003, "release": 0.12, "gain": -12}
       ],
       "effects": [{"type": "delay", "time": 0.24, "feedback": 0.2, "mix": 0.12}]
     },
@@ -335,7 +338,7 @@
     },
 
     "done-agent": {
-      "about": "the pack's signature: four rising chip notes G5 C6 E6 G6, then a fifth, held note settling back on the root C6 and ringing away, with a quiet E6 G6 shimmer and a soft echo",
+      "about": "the pack's signature: four rising chip notes G5 C6 E6 G6, then a fifth, held note settling back on the root C6 and ringing away, with a quiet E6 G6 shimmer and a soft echo; five hits. TREND reads steady: the phrase rises and then settles, and the meter only compares the two halves",
       "layers": [
         {"sample": "raw/kenney/music-jingles/jingles_NES00.wav", "start": 0.70, "end": 0.860, "speed": 2.667, "at": 0.0, "attack": 0.003, "release": 0.015, "lowpass": 4200},
         {"sample": "raw/kenney/music-jingles/jingles_NES00.wav", "start": 0.70, "end": 0.914, "speed": 3.560, "at": 0.08, "attack": 0.003, "release": 0.015, "lowpass": 4200},
@@ -360,7 +363,7 @@
     },
 
     "sys-session-start": {
-      "about": "insert coin and press start: the coin, then a twelve-note pentatonic chip tune with a second pulse voice, triangle bass and noise hats, ending on a long ringing root with a crash",
+      "about": "insert coin and press start: the coin, then a twelve-note pentatonic chip tune with a second pulse voice, sustained triangle bass and noise hats, ending on a long ringing root with a crash. Fifteen events (coin 2, tune 12, final 1); HIT reads 8 because the bass holds each pair of tune notes together",
       "layers": [
         {"sample": "raw/kenney/music-jingles/jingles_NES00.wav", "start": 0.70, "end": 0.793, "speed": 2.667, "attack": 0.003, "release": 0.008, "lowpass": 3400, "gain": -3},
         {"sample": "raw/kenney/digital-audio/zapThreeToneUp.wav", "start": 0.20, "end": 0.75, "speed": 3.364, "at": 0.05, "attack": 0.003, "release": 0.04, "lowpass": 4200},
@@ -379,7 +382,7 @@
         {"sample": "raw/kenney/music-jingles/jingles_NES00.wav", "start": 0.70, "end": 1.153, "speed": 5.333, "at": 1.63, "attack": 0.003, "release": 0.02, "lowpass": 4200},
 
         {"wave": "pulse", "width": 0.125, "notes": ["G4", "C5", "E5", "G5", "E5", "E5", "C5", "E5", "G5", "A5", "C6", "E6"], "at": 0.42, "step": 0.11, "dur": 0.085, "attack": 0.003, "release": 0.02, "lowpass": 3600, "gain": -14},
-        {"wave": "triangle", "notes": ["C4", "C4", "G4", "G4", "A4", "A4", "E4", "E4", "C4", "C4", "G4", "G4"], "at": 0.42, "step": 0.11, "dur": 0.085, "attack": 0.003, "release": 0.02, "gain": -11},
+        {"wave": "triangle", "notes": ["C4", "G4", "A4", "E4", "C4", "G4"], "at": 0.42, "step": 0.22, "dur": 0.18, "attack": 0.003, "release": 0.03, "gain": -9},
         {"wave": "noise", "notes": [440, 440, 440, 440, 440, 440, 440, 440, 440, 440, 440, 440], "at": 0.42, "step": 0.11, "dur": 0.008, "attack": 0.002, "decay": 0.02, "sustain": 0, "release": 0.01, "highpass": 4000, "lowpass": 8000, "gain": -22},
 
         {"sample": "raw/kenney/music-jingles/jingles_NES00.wav", "start": 0.70, "end": 1.64, "speed": 3.560, "at": 1.74, "attack": 0.003, "release": 0.06, "lowpass": 4000},
@@ -392,11 +395,12 @@
       "effects": [{"type": "delay", "time": 0.22, "feedback": 0.2, "mix": 0.08}]
     },
     "sys-compacting": {
-      "about": "folding away: a recorded falling stair of notes from D5 down to C4, then the same stair again slower, a fourth lower and muffled, crushed, ending on a low bong; falling",
+      "about": "folding away: a recorded falling stair of notes from D5 down to C4, then the same stair again faster, quieter and muffled as if squeezed, crushed, ending on a low bong with a noise thump. TREND reads steady although both stairs fall: each half holds one whole stair, and the bitcrush adds the same grit to both",
       "layers": [
         {"sample": "raw/kenney/interface-sounds/minimize_006.wav", "start": 0.01, "end": 0.36, "speed": 1.0, "attack": 0.003, "release": 0.02, "lowpass": 5000},
-        {"sample": "raw/kenney/interface-sounds/minimize_006.wav", "start": 0.01, "end": 0.36, "speed": 0.75, "at": 0.36, "attack": 0.003, "release": 0.02, "lowpass": 900, "gain": -1},
-        {"sample": "raw/kenney/interface-sounds/bong_001.wav", "start": 0.0, "end": 0.12, "speed": 1.122, "at": 0.84, "attack": 0.002, "release": 0.03, "lowpass": 1200, "gain": 2}
+        {"sample": "raw/kenney/interface-sounds/minimize_006.wav", "start": 0.01, "end": 0.36, "speed": 1.4, "at": 0.36, "attack": 0.003, "release": 0.02, "lowpass": 1500, "gain": -3},
+        {"sample": "raw/kenney/interface-sounds/bong_001.wav", "start": 0.0, "end": 0.12, "speed": 1.122, "at": 0.63, "attack": 0.002, "release": 0.03, "gain": 2},
+        {"wave": "noise", "at": 0.63, "dur": 0.02, "attack": 0.002, "decay": 0.06, "sustain": 0, "release": 0.02, "lowpass": 900, "highpass": 150, "gain": -10}
       ],
       "effects": [{"type": "bitcrush", "bits": 8, "downsample": 2}]
     },
